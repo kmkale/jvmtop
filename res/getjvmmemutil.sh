@@ -1,8 +1,8 @@
 #!/bin/sh
-# jvmtop - java monitoring for the command-line 
+# getjvmmemutil - get % mem utilization of listed JVM's from the command-line 
 # launch script
-#
-# author: Markus Kolb
+# author : Koustubha Kale (kmkale@gmail.com)
+# Based on jvmtop.sh by Markus Kolb
 # 
 DIR="$(cd "$(dirname "$(readlink -f "$0")")" && pwd)"
 
@@ -19,5 +19,5 @@ if [ ! -f "$TOOLSJAR" ] ; then
 fi
 
 "$JAVA_HOME"/bin/java $JAVA_OPTS -cp "$DIR/jvmtop.jar:$TOOLSJAR" \
-com.jvmtop.JvmTop "$@"
+com.jvmtop.GetJvmMemUtilization "$@"
 exit $?
