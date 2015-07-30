@@ -65,7 +65,7 @@ public class GetJvmMemUtilization
             toMB(vmInfo_.getHeapUsed()), toMB(vmInfo_.getHeapMax()),
             toMB(vmInfo_.getNonHeapUsed()), toMB(vmInfo_.getNonHeapMax()));*/
         
-        System.out.print(vmid+"="+Math.round(vmInfo_.getHeapUsed()*100/vmInfo_.getHeapMax())+" ");
+        System.out.print("["+vmid+"]="+Math.round(vmInfo_.getHeapUsed()*100/vmInfo_.getHeapMax())+" ");
       }
       catch(NumberFormatException nfe){
         //ignore
