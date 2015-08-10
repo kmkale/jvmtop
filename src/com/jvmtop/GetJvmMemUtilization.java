@@ -67,9 +67,8 @@ public class GetJvmMemUtilization
         
         System.out.print("["+vmid+"]="+Math.round(vmInfo_.getHeapUsed()*100/vmInfo_.getHeapMax())+" ");
       }
-      catch(NumberFormatException nfe){
+      catch(Exception nfe){
         //ignore
-        //System.out.println("PID should be given as number only. Input "+s+" is invalid");
       }      
     }
     System.out.println();
